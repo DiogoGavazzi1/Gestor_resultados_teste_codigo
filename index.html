@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Despesas</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body class="container text-white bg-dark">
+    <h1>💰 Gestor de Despesas</h1>
+
+    <div class="top-bar container my-4">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Adicionar
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Adicionar Novo Resultado</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <select id="resultado" class="form-select mt-2">
+                            <option selected disabled>-- Escolhe uma Opção --</option>
+                            <option value="✅ Aprovado">✅ Aprovado</option>
+                            <option value="❌ Reprovado">❌ Reprovado</option>
+                        </select>
+
+                        <div id="motivo-container" class="mt-2"></div>
+
+                        <select id="mes" class="form-select mt-2">
+                            <option value="Janeiro">📅 Janeiro</option>
+                            <option value="Fevereiro">📅 Fevereiro</option>
+                            <option value="Março">📅 Março</option>
+                            <option value="Abril">📅 Abril</option>
+                            <option value="Maio">📅 Maio</option>
+                            <option value="Junho">📅 Junho</option>
+                            <option value="Julho">📅 Julho</option>
+                            <option value="Agosto">📅 Agosto</option>
+                            <option value="Setembro">📅 Setembro</option>
+                            <option value="Outubro">📅 Outubro</option>
+                            <option value="Novembro">📅 Novembro</option>
+                            <option value="Dezembro">📅 Dezembro</option>
+                        </select>
+                        <br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Concluido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="total"><strong>Total:</strong></div>
+    </div>
+
+    <div class="expense-list text-dark my-3">
+        <div class="expense-item">
+        </div>
+    </div>
+
+    <div class="chart-container container col-md-4">
+        <canvas id="expenseChart" width="100%" height="300"></canvas>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+        integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
